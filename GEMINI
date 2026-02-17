@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Slice - Elite Dessert Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-purple: #bc13fe;
+            --electric-violet: #8f00ff;
+        }
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #05010d;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .neon-glow {
+            text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-purple), 0 0 30px var(--electric-violet);
+        }
+        .neon-border {
+            box-shadow: 0 0 10px var(--neon-purple), inset 0 0 5px var(--neon-purple);
+            border: 1px solid var(--neon-purple);
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .bg-gradient-neon {
+            background: radial-gradient(circle at center, #2d004d 0%, #05010d 100%);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .gps-grid {
+            background-image: linear-gradient(rgba(188, 19, 254, 0.1) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(188, 19, 254, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-neon">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="text-2xl font-bold font-orbitron tracking-tighter neon-glow text-white">
+                NEON<span class="text-[#bc13fe]">SLICE</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-bold">
+                <a href="#menu" class="hover:text-[#bc13fe] transition-all">Menu</a>
+                <a href="#promo" class="hover:text-[#bc13fe] transition-all">Promotions</a>
+                <a href="#location" class="hover:text-[#bc13fe] transition-all">Locations</a>
+            </div>
+            <button class="neon-border px-6 py-2 text-xs uppercase font-bold hover:bg-[#bc13fe] hover:text-white transition-all">
+                Bag (0)
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#bc13fe] opacity-20 blur-[120px] rounded-full"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center z-10">
+            <div>
+                <h2 class="text-[#bc13fe] font-orbitron font-bold tracking-[0.5em] mb-4 uppercase">Elite Craftsmanship</h2>
+                <h1 class="text-6xl md:text-8xl font-bold leading-none mb-6">
+                    BLUEBERRY<br>
+                    <span class="neon-glow italic">ECSTASY</span>
+                </h1>
+                <p class="text-stone-400 text-lg mb-8 max-w-md leading-relaxed">
+                    Experience the ultimate fusion of premium cream cheese and wild mountain blueberries. Engineered for the perfect bite.
+                </p>
+                <div class="flex gap-4">
+                    <button class="bg-[#bc13fe] text-white px-10 py-4 font-bold uppercase text-sm shadow-[0_0_20px_rgba(188,19,254,0.5)] hover:scale-105 transition-all">
+                        Order Online
+                    </button>
+                    <button class="glass px-10 py-4 font-bold uppercase text-sm hover:bg-white/10 transition-all">
+                        Full Menu
+                    </button>
+                </div>
+            </div>
+            <div class="relative flex justify-center items-center">
+                <div class="absolute w-[120%] h-[120%] bg-white/5 rounded-full blur-3xl"></div>
+                <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=1000&q=80" 
+                     alt="Signature Blueberry Cheesecake" 
+                     class="floating rounded-2xl shadow-2xl relative z-10 border border-white/10 object-cover w-[450px] h-[550px]"
+                     onerror="this.src='https://placehold.co/600x800/1a0b2e/bc13fe?text=Elite+Cheesecake'">
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Banner -->
+    <section id="promo" class="py-12 relative">
+        <div class="bg-[#bc13fe] py-6 overflow-hidden whitespace-nowrap -rotate-1 shadow-[0_0_30px_rgba(188,19,254,0.4)]">
+            <div class="inline-block animate-marquee uppercase font-orbitron font-black text-3xl text-black">
+                PREMIUM INGREDIENTS — GLOBAL SOURCING — ZERO PRESERVATIVES — 48H COLD AGING — NEW FLAVORS DROPPING — &nbsp;
+            </div>
+            <div class="inline-block animate-marquee uppercase font-orbitron font-black text-3xl text-black">
+                PREMIUM INGREDIENTS — GLOBAL SOURCING — ZERO PRESERVATIVES — 48H COLD AGING — NEW FLAVORS DROPPING — &nbsp;
+            </div>
+        </div>
+        <style>
+            @keyframes marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+            .animate-marquee {
+                animation: marquee 25s linear infinite;
+            }
+        </style>
+    </section>
+
+    <!-- Extended Menu Section -->
+    <section id="menu" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+            <div>
+                <h3 class="text-[#bc13fe] font-orbitron tracking-widest uppercase mb-2">The Lab Results</h3>
+                <h2 class="text-5xl font-bold uppercase">Signature Series</h2>
+            </div>
+            <p class="text-stone-500 max-w-xs text-right hidden md:block">Each slice is meticulously weighed and tested for texture consistency.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Item 1: Blueberry -->
+            <div class="glass p-4 group transition-all duration-500 hover:scale-[1.02]">
+                <div class="relative overflow-hidden mb-6 aspect-square">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80" alt="Midnight Blueberry" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700">
+                    <div class="absolute top-4 right-4 bg-[#bc13fe] px-3 py-1 text-xs font-bold rounded-full">BEST SELLER</div>
+                </div>
+                <h4 class="text-xl font-bold mb-2 uppercase tracking-tight">Midnight Blueberry</h4>
+                <p class="text-stone-500 text-xs mb-4 h-12 overflow-hidden">Wild mountain blueberry reduction with a hint of organic lemon zest.</p>
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-[#bc13fe] font-orbitron text-lg">฿240.00</span>
+                    <span class="text-[10px] text-stone-500 uppercase tracking-widest">48h Aging</span>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <button class="glass py-3 text-[10px] uppercase font-bold hover:bg-white/10 transition-all">Details</button>
+                    <button class="bg-white text-black py-3 text-[10px] uppercase font-bold hover:bg-[#bc13fe] hover:text-white transition-all">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Item 2: Matcha -->
+            <div class="glass p-4 group transition-all duration-500 hover:scale-[1.02]">
+                <div class="relative overflow-hidden mb-6 aspect-square">
+                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7bb7445?auto=format&fit=crop&w=800&q=80" alt="Kyoto Neon Matcha" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700">
+                    <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md px-3 py-1 text-xs font-bold rounded-full border border-white/20">NEW</div>
+                </div>
+                <h4 class="text-xl font-bold mb-2 uppercase tracking-tight">Kyoto Neon Matcha</h4>
+                <p class="text-stone-500 text-xs mb-4 h-12 overflow-hidden">Ceremonial grade Uji Matcha infused into velvet-smooth cream cheese.</p>
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-[#bc13fe] font-orbitron text-lg">฿280.00</span>
+                    <span class="text-[10px] text-stone-500 uppercase tracking-widest">Premium Import</span>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <button class="glass py-3 text-[10px] uppercase font-bold hover:bg-white/10 transition-all">Details</button>
+                    <button class="bg-white text-black py-3 text-[10px] uppercase font-bold hover:bg-[#bc13fe] hover:text-white transition-all">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Item 3: Strawberry -->
+            <div class="glass p-4 group transition-all duration-500 hover:scale-[1.02]">
+                <div class="relative overflow-hidden mb-6 aspect-square">
+                    <img src="https://images.unsplash.com/photo-1524351199679-46cddfdb524d?auto=format&fit=crop&w=800&q=80" alt="Cyber Strawberry" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700">
+                </div>
+                <h4 class="text-xl font-bold mb-2 uppercase tracking-tight">Cyber Strawberry</h4>
+                <p class="text-stone-500 text-xs mb-4 h-12 overflow-hidden">Fresh Amaou strawberry glaze over a buttery Graham cracker base.</p>
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-[#bc13fe] font-orbitron text-lg">฿220.00</span>
+                    <span class="text-[10px] text-stone-500 uppercase tracking-widest">Fresh Batch</span>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <button class="glass py-3 text-[10px] uppercase font-bold hover:bg-white/10 transition-all">Details</button>
+                    <button class="bg-white text-black py-3 text-[10px] uppercase font-bold hover:bg-[#bc13fe] hover:text-white transition-all">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Item 4: Espresso -->
+            <div class="glass p-4 group transition-all duration-500 hover:scale-[1.02]">
+                <div class="relative overflow-hidden mb-6 aspect-square">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80" alt="Darkest Espresso" class="w-full h-full object-cover grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700">
+                    <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md px-3 py-1 text-xs font-bold rounded-full border border-white/20">LIMITED</div>
+                </div>
+                <h4 class="text-xl font-bold mb-2 uppercase tracking-tight">Darkest Espresso</h4>
+                <p class="text-stone-500 text-xs mb-4 h-12 overflow-hidden">Double-shot single origin espresso swirl with dark chocolate ganache.</p>
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-[#bc13fe] font-orbitron text-lg">฿265.00</span>
+                    <span class="text-[10px] text-stone-500 uppercase tracking-widest">High Caffeine</span>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <button class="glass py-3 text-[10px] uppercase font-bold hover:bg-white/10 transition-all">Details</button>
+                    <button class="bg-white text-black py-3 text-[10px] uppercase font-bold hover:bg-[#bc13fe] hover:text-white transition-all">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Item 5: Salted Caramel -->
+            <div class="glass p-4 group transition-all duration-500 hover:scale-[1.02]">
+                <div class="relative overflow-hidden mb-6 aspect-square">
+                    <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=80" alt="Smoked Caramel" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700">
+                </div>
+                <h4 class="text-xl font-bold mb-2 uppercase tracking-tight">Smoked Caramel</h4>
+                <p class="text-stone-500 text-xs mb-4 h-12 overflow-hidden">Hand-crafted smoked caramel with Maldon sea salt flakes.</p>
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-[#bc13fe] font-orbitron text-lg">฿235.00</span>
+                    <span class="text-[10px] text-stone-500 uppercase tracking-widest">Hand-crafted</span>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <button class="glass py-3 text-[10px] uppercase font-bold hover:bg-white/10 transition-all">Details</button>
+                    <button class="bg-white text-black py-3 text-[10px] uppercase font-bold hover:bg-[#bc13fe] hover:text-white transition-all">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Item 6: Yuzu -->
+            <div class="glass p-4 group transition-all duration-500 hover:scale-[1.02]">
+                <div class="relative overflow-hidden mb-6 aspect-square">
+                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7bb7445?auto=format&fit=crop&w=800&q=80" alt="Yuzu Flash" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700">
+                </div>
+                <h4 class="text-xl font-bold mb-2 uppercase tracking-tight">Yuzu Flash</h4>
+                <p class="text-stone-500 text-xs mb-4 h-12 overflow-hidden">Tangy Japanese Yuzu citrus balanced with dense, creamy texture.</p>
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-[#bc13fe] font-orbitron text-lg">฿290.00</span>
+                    <span class="text-[10px] text-stone-500 uppercase tracking-widest">Seasonal</span>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <button class="glass py-3 text-[10px] uppercase font-bold hover:bg-white/10 transition-all">Details</button>
+                    <button class="bg-white text-black py-3 text-[10px] uppercase font-bold hover:bg-[#bc13fe] hover:text-white transition-all">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section (GPS Style) -->
+    <section id="location" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="glass rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+            <div class="p-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse shadow-[0_0_10px_#ef4444]"></div>
+                    <span class="text-xs uppercase tracking-widest font-bold text-stone-400">Signal: Satellite Connected</span>
+                </div>
+                <h2 class="text-4xl font-bold mb-6">HUB<br><span class="text-[#bc13fe]">COORDINATES</span></h2>
+                <div class="space-y-6 mb-10">
+                    <div class="flex gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
+                        <div class="text-2xl">📍</div>
+                        <div>
+                            <p class="font-bold">The Emsphere, Floor G</p>
+                            <p class="text-xs text-stone-500 tracking-wider">SUKHUMVIT DISTRICT</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-4 border border-white/5 rounded-xl opacity-50">
+                        <div class="text-2xl">📍</div>
+                        <div>
+                            <p class="font-bold">Siam Paragon, Floor 4</p>
+                            <p class="text-xs text-stone-500 tracking-wider">PATHUM WAN DISTRICT</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="w-full bg-[#bc13fe] py-4 font-orbitron font-bold uppercase tracking-widest flex items-center justify-center gap-3 hover:brightness-125 transition-all">
+                    <span>Initiate Navigation</span>
+                </button>
+            </div>
+            <div class="gps-grid relative min-h-[400px] flex items-center justify-center border-l border-white/10">
+                <div class="absolute w-40 h-40 bg-[#bc13fe] opacity-20 blur-3xl rounded-full"></div>
+                <div class="relative z-10 text-center">
+                    <div class="w-16 h-16 border-2 border-[#bc13fe] rounded-full mx-auto animate-ping absolute -inset-0"></div>
+                    <div class="w-16 h-16 bg-[#bc13fe] rounded-full mx-auto flex items-center justify-center shadow-[0_0_30px_#bc13fe]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" viewBox="0 0 16 16">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                        </svg>
+                    </div>
+                    <p class="mt-4 font-orbitron font-bold text-xs tracking-[0.3em] uppercase">Target Locked</p>
+                    <p class="text-[10px] text-stone-500 mt-1 italic">13.7367° N, 100.5231° E</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-white/5 glass">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 text-xs">
+            <div class="col-span-1 md:col-span-2">
+                <div class="text-2xl font-bold font-orbitron tracking-tighter neon-glow mb-6">
+                    NEON<span class="text-[#bc13fe]">SLICE</span>
+                </div>
+                <p class="text-stone-500 max-w-sm mb-8 leading-relaxed font-light">
+                    Redefining dessert through precise engineering and global flavor research. Join the electric revolution.
+                </p>
+                <div class="flex space-x-8 text-stone-400 uppercase tracking-widest font-bold">
+                    <a href="#" class="hover:text-[#bc13fe] transition-all">IG</a>
+                    <a href="#" class="hover:text-[#bc13fe] transition-all">TT</a>
+                    <a href="#" class="hover:text-[#bc13fe] transition-all">TW</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-[0.2em] mb-8">Resources</h4>
+                <ul class="space-y-4 text-stone-500">
+                    <li><a href="#" class="hover:text-[#bc13fe]">The Science</a></li>
+                    <li><a href="#" class="hover:text-[#bc13fe]">Allergens</a></li>
+                    <li><a href="#" class="hover:text-[#bc13fe]">Wholesale</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-[0.2em] mb-8">Support</h4>
+                <p class="text-stone-500 leading-relaxed">
+                    24/7 Logistics Monitoring<br>
+                    T: +66 82 XXX XXXX<br>
+                    E: lab@neonslice.com
+                </p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-20 pt-10 border-t border-white/5 text-[9px] uppercase tracking-[0.4em] text-stone-700 text-center">
+            &copy; 2026 NEON SLICE ATELIER. SCIENTIFICALLY CRAFTED.
+        </div>
+    </footer>
+
+</body>
+</html>
